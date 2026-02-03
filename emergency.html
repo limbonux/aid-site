@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>أرقام الطوارئ | مُسعف</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .emergency-card {
+            background: white;
+            padding: 30px;
+            border-radius: 40px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-right: 15px solid var(--primary);
+            transition: var(--transition);
+        }
+        .emergency-card:hover {
+            transform: scale(1.03);
+        }
+        .number-box {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1;
+        }
+        .desc-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .call-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 10px 20px rgba(239, 35, 60, 0.3);
+        }
+    </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-heart-pulse"></i>
+                <span>مُسعف</span>
+            </a>
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">ما هي الإسعافات؟</a></li>
+                    <li><a href="cases.html">دليل الحالات</a></li>
+                    <li><a href="kit.html">حقيبة الإسعاف</a></li>
+                    <li><a href="emergency.html" class="active">أرقام
+                            الطوارئ</a></li>
+                    <li><a href="media.html">المكتبة المرئية</a></li>
+                    <li><a href="tips.html">نصائح وإرشادات</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero"
+                style="background: var(--gradient-red); border-radius: 0 0 80px 80px;">
+                <div class="container animate" style="text-align: center;">
+                    <h1 class="hero-title">أرقام قد تنقذ حياة</h1>
+                    <p class="hero-subtitle" style="margin: 0 auto 40px;">احتفظ
+                        بهذه الأرقام في هاتفك ووزعها في مكان بارز بمنزلك.</p>
+                </div>
+            </div>
+
+            <section class="section container">
+                <div class="emergency-grid">
+                    <!-- 911 -->
+                    <div class="emergency-card animate"
+                        style="border-color: #2b2d42;">
+                        <div class="desc-box">
+                            <h3>طوارئ المملكة</h3>
+                            <p>المركز الوطني للعمليات الأمنية (كافة
+                                البلاغات)</p>
+                            <span class="number-box"
+                                style="color: #2b2d42;">911</span>
+                        </div>
+                        <a href="tel:911" class="call-icon"
+                            style="background: #2b2d42;"><i
+                                class="fas fa-phone"></i></a>
+                    </div>
+
+                    <!-- 997 -->
+                    <div class="emergency-card animate">
+                        <div class="desc-box">
+                            <h3>الإسعاف</h3>
+                            <p>جمعية الهلال الأحمر السعودي</p>
+                            <span class="number-box">997</span>
+                        </div>
+                        <a href="tel:997" class="call-icon"><i
+                                class="fas fa-phone"></i></a>
+                    </div>
+
+                    <!-- 998 -->
+                    <div class="emergency-card animate"
+                        style="border-color: #fca311;">
+                        <div class="desc-box">
+                            <h3>الدفاع المدني</h3>
+                            <p>الحرائق وحالات الإنقاذ الكبرى</p>
+                            <span class="number-box"
+                                style="color: #fca311;">998</span>
+                        </div>
+                        <a href="tel:998" class="call-icon"
+                            style="background: #fca311;"><i
+                                class="fas fa-phone"></i></a>
+                    </div>
+
+                    <!-- 999 -->
+                    <div class="emergency-card animate"
+                        style="border-color: #00b4d8;">
+                        <div class="desc-box">
+                            <h3>الشرطة</h3>
+                            <p>البلاغات الأمنية والمرورية</p>
+                            <span class="number-box"
+                                style="color: #00b4d8;">999</span>
+                        </div>
+                        <a href="tel:999" class="call-icon"
+                            style="background: #00b4d8;"><i
+                                class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div
+                    style="margin-top: 100px; background: white; padding: 60px; border-radius: 40px; box-shadow: var(--shadow-md);"
+                    class="animate">
+                    <h2 class="section-title">كيف تطلب المساعدة بفعالية؟</h2>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                        <div
+                            style="background: #f8f9fa; padding: 30px; border-radius: 20px;">
+                            <h4
+                                style="color: var(--primary); margin-bottom: 15px;">1.
+                                ابقَ هادئاً</h4>
+                            <p>الهلع يمنعك من إعطاء معلومات صحيحة. تنفس بعمق
+                                وتحدث بوضوح.</p>
+                        </div>
+                        <div
+                            style="background: #f8f9fa; padding: 30px; border-radius: 20px;">
+                            <h4
+                                style="color: var(--primary); margin-bottom: 15px;">2.
+                                حدد موقعك</h4>
+                            <p>اذكر المدينة، الحي، الشارع، وأبرز المعالم القريبة
+                                منك.</p>
+                        </div>
+                        <div
+                            style="background: #f8f9fa; padding: 30px; border-radius: 20px;">
+                            <h4
+                                style="color: var(--primary); margin-bottom: 15px;">3.
+                                صف الحالة</h4>
+                            <p>اذكر عدد المصابين، أعمارهم التقريبية، ونوع
+                                الإصابة بوضوح.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="footer-logo">
+                            <i class="fas fa-heart-pulse"></i> مُسعف
+                        </a>
+                        <p style="opacity: 0.7; margin-bottom: 25px;">منصة
+                            سعودية تهدف لرفع مستوى الوعي الصحي في المجتمع وتدريب
+                            الأفراد على التعامل مع المواقف الطارئة.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="margin-bottom: 25px; font-size: 1.2rem;">روابط
+                            سريعة</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 12px; opacity: 0.8;">
+                            <li><a href="cases.html"
+                                    style="color: white; text-decoration: none;">دليل
+                                    الحالات</a></li>
+                            <li><a href="kit.html"
+                                    style="color: white; text-decoration: none;">مكونات
+                                    الحقيبة</a></li>
+                            <li><a href="tips.html"
+                                    style="color: white; text-decoration: none;">نصائح
+                                    وإرشادات</a></li>
+                            <li><a href="media.html"
+                                    style="color: white; text-decoration: none;">المكتبة
+                                    المرئية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 25px; font-size: 1.2rem;">اتصل
+                            بنا</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 15px; opacity: 0.8;">
+                            <li><i class="fas fa-map-marker-alt"
+                                    style="margin-left: 10px;"></i> المملكة
+                                العربية السعودية</li>
+                            <li><i class="fas fa-envelope"
+                                    style="margin-left: 10px;"></i>
+                                info@mosaif.sa</li>
+                            <li><i class="fas fa-headset"
+                                    style="margin-left: 10px;"></i>
+                                800-123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; opacity: 0.5; font-size: 0.9rem;">
+                    <p>&copy; 2026 جميع الحقوق محفوظة لمنصة مُسعف - مبادرة
+                        وطنية</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>حقيبة الإسعافات الأولية | مُسعف</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+        .kit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .kit-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border-bottom: 6px solid var(--primary);
+            transition: var(--transition);
+        }
+        .kit-box:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+        .kit-box i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        .location-card {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 50px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .location-icon {
+            font-size: 4rem;
+            color: var(--accent);
+        }
+    </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-heart-pulse"></i>
+                <span>مُسعف</span>
+            </a>
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">ما هي الإسعافات؟</a></li>
+                    <li><a href="cases.html">دليل الحالات</a></li>
+                    <li><a href="kit.html" class="active">حقيبة الإسعاف</a></li>
+                    <li><a href="emergency.html">أرقام الطوارئ</a></li>
+                    <li><a href="media.html">المكتبة المرئية</a></li>
+                    <li><a href="tips.html">نصائح وإرشادات</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <div class="container animate">
+                    <span class="section-tag"
+                        style="color: rgba(255,255,255,0.7);">رفيقك في كل
+                        مكان</span>
+                    <h1 class="hero-title">حقيبة الإسعافات الأولية</h1>
+                    <p class="hero-subtitle">تعرف على المكونات التي لا يخلو منها
+                        منزل أو سيارة آمنة، وأين يجب أن تضعها.</p>
+                </div>
+            </div>
+
+            <section class="section container">
+                <div
+                    style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+                    <h2 class="section-title">المكونات الأساسية للحقيبة</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.8;">يجب أن تكون
+                        الحقيبة منظمة، سهلة الفتح، ومحمية من الرطوبة
+                        والحرارة.</p>
+                </div>
+
+                <div class="kit-grid animate">
+                    <div class="kit-box">
+                        <i class="fas fa-scissors"></i>
+                        <h3>أدوات القطع</h3>
+                        <p>مقص طبي حاد لقص الضمادات أو الملابس عند الضرورة.</p>
+                    </div>
+                    <div class="kit-box">
+                        <i class="fas fa-hand-dots"></i>
+                        <h3>وسائل الوقاية</h3>
+                        <p>قفازات طبية (لاتكس) لحمايتك وحماية المصاب من انتقال
+                            العدوى.</p>
+                    </div>
+                    <div class="kit-box">
+                        <i class="fas fa-scroll"></i>
+                        <h3>الأربطة والضمادات</h3>
+                        <p>شاش معقم، أربطة ضاغطة، ولاصق جروح بمقاسات مختلفة.</p>
+                    </div>
+                    <div class="kit-box">
+                        <i class="fas fa-vial"></i>
+                        <h3>المطهرات</h3>
+                        <p>محلول معقم (سافلون أو يود)، ومسحات كحولية لتنظيف
+                            الجروح.</p>
+                    </div>
+                    <div class="kit-box">
+                        <i class="fas fa-thermometer"></i>
+                        <h3>أدوات القياس</h3>
+                        <p>ميزان حرارة رقمي لمتابعة حالة المصاب بدقة.</p>
+                    </div>
+                    <div class="kit-box">
+                        <i class="fas fa-pills"></i>
+                        <h3>أدوية أساسية</h3>
+                        <p>مسكنات ألم خفيفة (باراسيتامول)، ومراهم للحروق
+                            البسيطة.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-title"
+                    style="text-align: center; margin-top: 100px;">أماكن تواجد
+                    الحقيبة</h2>
+
+                <div style="text-align: center; margin-bottom: 60px;"
+                    class="animate">
+                    <img
+                        src="https://images.unsplash.com/photo-1583947581924-860bda3a44f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="Full First Aid Kit"
+                        style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-md);">
+                </div>
+
+                <div class="location-card animate">
+                    <div class="location-icon"><i
+                            class="fas fa-house-chimney"></i></div>
+                    <div>
+                        <h3>في المنزل</h3>
+                        <p>يجب وضعها في مكان مرتفع ومعروف لجميع البالغين، بعيداً
+                            عن متناول الأطفال وعن الرطوبة (يفضل عدم وضعها في
+                            الحمام).</p>
+                    </div>
+                </div>
+
+                <div class="location-card animate"
+                    style="background: var(--gradient-red);">
+                    <div class="location-icon" style="color: white;"><i
+                            class="fas fa-car"></i></div>
+                    <div>
+                        <h3>في السيارة</h3>
+                        <p>يجب أن تكون في مكان يسهل الوصول إليه بسرعة (مثل جيب
+                            الباب أو الصندوق الخلفي المنظم) ولا تترك تحت أشعة
+                            الشمس المباشرة لفترات طويلة.</p>
+                    </div>
+                </div>
+
+                <div class="location-card animate">
+                    <div class="location-icon"><i
+                            class="fas fa-school"></i></div>
+                    <div>
+                        <h3>في المدرسة / العمل</h3>
+                        <p>يجب أن تتوفر في كل فصل أو مكتب، مع تدريب مسؤول
+                            السلامة على محتوياتها وكيفية استخدامها في حالات
+                            الإصابات الرياضية أو المفاجئة.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="footer-logo">
+                            <i class="fas fa-heart-pulse"></i> مُسعف
+                        </a>
+                        <p style="opacity: 0.7; margin-bottom: 25px;">منصة
+                            سعودية تهدف لرفع مستوى الوعي الصحي في المجتمع وتدريب
+                            الأفراد على التعامل مع المواقف الطارئة.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="margin-bottom: 25px; font-size: 1.2rem;">روابط
+                            سريعة</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 12px; opacity: 0.8;">
+                            <li><a href="cases.html"
+                                    style="color: white; text-decoration: none;">دليل
+                                    الحالات</a></li>
+                            <li><a href="kit.html"
+                                    style="color: white; text-decoration: none;">مكونات
+                                    الحقيبة</a></li>
+                            <li><a href="tips.html"
+                                    style="color: white; text-decoration: none;">نصائح
+                                    وإرشادات</a></li>
+                            <li><a href="media.html"
+                                    style="color: white; text-decoration: none;">المكتبة
+                                    المرئية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 25px; font-size: 1.2rem;">اتصل
+                            بنا</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 15px; opacity: 0.8;">
+                            <li><i class="fas fa-map-marker-alt"
+                                    style="margin-left: 10px;"></i> المملكة
+                                العربية السعودية</li>
+                            <li><i class="fas fa-envelope"
+                                    style="margin-left: 10px;"></i>
+                                info@mosaif.sa</li>
+                            <li><i class="fas fa-headset"
+                                    style="margin-left: 10px;"></i>
+                                800-123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; opacity: 0.5; font-size: 0.9rem;">
+                    <p>&copy; 2026 جميع الحقوق محفوظة لمنصة مُسعف - مبادرة
+                        وطنية</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

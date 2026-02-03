@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>المكتبة المرئية التعليمية | مُسعف</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+        .video-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+        .video-thumb {
+            width: 100%;
+            height: 200px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .play-btn {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+        .video-card:hover .play-btn {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        .video-info {
+            padding: 25px;
+        }
+    </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-heart-pulse"></i>
+                <span>مُسعف</span>
+            </a>
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">ما هي الإسعافات؟</a></li>
+                    <li><a href="cases.html">دليل الحالات</a></li>
+                    <li><a href="kit.html">حقيبة الإسعاف</a></li>
+                    <li><a href="emergency.html">أرقام الطوارئ</a></li>
+                    <li><a href="media.html" class="active">المكتبة
+                            المرئية</a></li>
+                    <li><a href="tips.html">نصائح وإرشادات</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero">
+                <div class="container animate">
+                    <span class="section-tag"
+                        style="color: rgba(255,255,255,0.7);">شاهد وتعلّم</span>
+                    <h1 class="hero-title">الوسائط التوعوية</h1>
+                    <p class="hero-subtitle">مجموعة من الفيديوهات والإنفوجرافيك
+                        التي توضح الخطوات الإسعافية بشكل مرئي ومبسط.</p>
+                </div>
+            </div>
+
+            <section class="section container">
+                <h2 class="section-title">فيديوهات تعليمية</h2>
+                <div class="grid-3 animate">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img
+                                src="https://img.youtube.com/vi/Vv_S7V_46u0/maxresdefault.jpg"
+                                alt="CPR"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                            <a
+                                href="https://www.youtube.com/watch?v=Vv_S7V_46u0"
+                                target="_blank" class="play-btn"><i
+                                    class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video-info">
+                            <h3>الإنعاش القلبي الرئوي</h3>
+                            <p>شرح عملي من الهلال الأحمر السعودي لكيفية إنعاش
+                                القلب.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img
+                                src="https://img.youtube.com/vi/yG75EieM8oQ/maxresdefault.jpg"
+                                alt="Choking"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                            <a
+                                href="https://www.youtube.com/watch?v=yG75EieM8oQ"
+                                target="_blank" class="play-btn"><i
+                                    class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video-info">
+                            <h3>إسعاف الغصة</h3>
+                            <p>تعلم مناورة هيمليك لإنقاذ الشخص المختنق في ثوانٍ
+                                معدودة.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <div class="video-thumb">
+                            <img
+                                src="https://img.youtube.com/vi/XjMvBW9KDLA/maxresdefault.jpg"
+                                alt="Bleeding"
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                            <a
+                                href="https://www.youtube.com/watch?v=XjMvBW9KDLA"
+                                target="_blank" class="play-btn"><i
+                                    class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video-info">
+                            <h3>وقف النزيف</h3>
+                            <p>خطوات عملية للتعامل مع الجروح العميقة والنزيف
+                                الغزير.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title" style="margin-top: 100px;">إنفوجرافيك
+                    توعوي</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;"
+                    class="animate">
+                    <img src="https://pbs.twimg.com/media/D-H1R8WWsAAnf6G.jpg"
+                        alt="Infographic 1"
+                        style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-md);">
+                    <img src="https://pbs.twimg.com/media/E_H8O8XXIAI1O7J.jpg"
+                        alt="Infographic 2"
+                        style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-md);">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="footer-logo">
+                            <i class="fas fa-heart-pulse"></i> مُسعف
+                        </a>
+                        <p style="opacity: 0.7; margin-bottom: 25px;">منصة
+                            سعودية تهدف لرفع مستوى الوعي الصحي في المجتمع وتدريب
+                            الأفراد على التعامل مع المواقف الطارئة.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="margin-bottom: 25px; font-size: 1.2rem;">روابط
+                            سريعة</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 12px; opacity: 0.8;">
+                            <li><a href="cases.html"
+                                    style="color: white; text-decoration: none;">دليل
+                                    الحالات</a></li>
+                            <li><a href="kit.html"
+                                    style="color: white; text-decoration: none;">مكونات
+                                    الحقيبة</a></li>
+                            <li><a href="tips.html"
+                                    style="color: white; text-decoration: none;">نصائح
+                                    وإرشادات</a></li>
+                            <li><a href="media.html"
+                                    style="color: white; text-decoration: none;">المكتبة
+                                    المرئية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 25px; font-size: 1.2rem;">اتصل
+                            بنا</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 15px; opacity: 0.8;">
+                            <li><i class="fas fa-map-marker-alt"
+                                    style="margin-left: 10px;"></i> المملكة
+                                العربية السعودية</li>
+                            <li><i class="fas fa-envelope"
+                                    style="margin-left: 10px;"></i>
+                                info@mosaif.sa</li>
+                            <li><i class="fas fa-headset"
+                                    style="margin-left: 10px;"></i>
+                                800-123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; opacity: 0.5; font-size: 0.9rem;">
+                    <p>&copy; 2026 جميع الحقوق محفوظة لمنصة مُسعف - مبادرة
+                        وطنية</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

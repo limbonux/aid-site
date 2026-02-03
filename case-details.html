@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>تفاصيل الحالة | مُسعف</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+        .case-details-container {
+            background: white;
+            border-radius: 40px;
+            padding: 60px;
+            margin-top: -100px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            z-index: 10;
+        }
+        .info-list {
+            margin: 30px 0;
+            padding: 0;
+        }
+        .info-list li {
+            background: #f8f9fa;
+            padding: 20px 60px 20px 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            list-style: none;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        .info-list li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            color: var(--success);
+            font-size: 1.3rem;
+        }
+        .emergency-notice {
+            background: #fff0f0;
+            border-right: 8px solid var(--primary);
+            padding: 40px;
+            border-radius: 24px;
+            margin-top: 60px;
+        }
+    </style>
+    </head>
+    <body>
+
+        <header>
+            <a href="index.html" class="logo">
+                <i class="fas fa-heart-pulse"></i>
+                <span>مُسعف</span>
+            </a>
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">ما هي الإسعافات؟</a></li>
+                    <li><a href="cases.html" class="active">دليل
+                            الحالات</a></li>
+                    <li><a href="kit.html">حقيبة الإسعاف</a></li>
+                    <li><a href="emergency.html">أرقام الطوارئ</a></li>
+                    <li><a href="media.html">المكتبة المرئية</a></li>
+                    <li><a href="tips.html">نصائح وإرشادات</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="hero" style="height: 400px; border-radius: 0;">
+                <div class="container animate" style="text-align: center;">
+                    <i id="case-icon" class="fas fa-briefcase-medical"
+                        style="font-size: 4rem; color: var(--primary); margin-bottom: 20px; background: white; width: 100px; height: 100px; display: inline-flex; align-items: center; justify-content: center; border-radius: 30px; box-shadow: var(--shadow-md);"></i>
+                    <h1 id="case-title" class="hero-title">جاري التحميل...</h1>
+                </div>
+            </div>
+
+            <section class="container" style="padding-bottom: 100px;">
+                <div class="case-details-container animate">
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; align-items: start;">
+                        <div>
+                            <h2 class="section-title"
+                                style="font-size: 1.6rem;">وصف الحالة</h2>
+                            <p id="case-description"
+                                style="font-size: 1.1rem; line-height: 2; opacity: 0.9; margin-bottom: 40px;"></p>
+
+                            <h2 class="section-title"
+                                style="font-size: 1.6rem; color: var(--warning);">الأعراض
+                                الشائعة</h2>
+                            <ul id="case-symptoms" class="info-list"
+                                style="--success: var(--warning);"></ul>
+                        </div>
+                        <div>
+                            <img id="case-image" src alt="Illustration"
+                                style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-md); margin-bottom: 40px;">
+
+                            <h2 class="section-title"
+                                style="font-size: 1.6rem; color: var(--success);">خطوات
+                                الإسعاف الصحيحة</h2>
+                            <ul id="case-steps" class="info-list"></ul>
+                        </div>
+                    </div>
+
+                    <div class="emergency-notice">
+                        <h2
+                            style="color: var(--primary); margin-bottom: 20px;"><i
+                                class="fas fa-phone-volume"></i> متى يجب الاتصال
+                            بالطوارئ؟</h2>
+                        <p id="case-emergency"
+                            style="font-size: 1.05rem; font-weight: 700; color: var(--secondary);"></p>
+                        <div style="margin-top: 30px;">
+                            <a href="tel:997" class="btn btn-primary">اتصل
+                                بالهلال الأحمر (997)</a>
+                        </div>
+                    </div>
+
+                    <div
+                        style="margin-top: 60px; text-align: center; border-top: 1px solid #eee; padding-top: 40px;">
+                        <a href="cases.html" class="btn"
+                            style="background: var(--secondary); color: white;">العودة
+                            لدليل الحالات</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="footer-logo">
+                            <i class="fas fa-heart-pulse"></i> مُسعف
+                        </a>
+                        <p style="opacity: 0.7; margin-bottom: 25px;">منصة
+                            سعودية تهدف لرفع مستوى الوعي الصحي في المجتمع وتدريب
+                            الأفراد على التعامل مع المواقف الطارئة.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="margin-bottom: 25px; font-size: 1.2rem;">روابط
+                            سريعة</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 12px; opacity: 0.8;">
+                            <li><a href="cases.html"
+                                    style="color: white; text-decoration: none;">دليل
+                                    الحالات</a></li>
+                            <li><a href="kit.html"
+                                    style="color: white; text-decoration: none;">مكونات
+                                    الحقيبة</a></li>
+                            <li><a href="tips.html"
+                                    style="color: white; text-decoration: none;">نصائح
+                                    وإرشادات</a></li>
+                            <li><a href="media.html"
+                                    style="color: white; text-decoration: none;">المكتبة
+                                    المرئية</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 25px; font-size: 1.2rem;">اتصل
+                            بنا</h4>
+                        <ul
+                            style="list-style: none; display: flex; flex-direction: column; gap: 15px; opacity: 0.8;">
+                            <li><i class="fas fa-map-marker-alt"
+                                    style="margin-left: 10px;"></i> المملكة
+                                العربية السعودية</li>
+                            <li><i class="fas fa-envelope"
+                                    style="margin-left: 10px;"></i>
+                                info@mosaif.sa</li>
+                            <li><i class="fas fa-headset"
+                                    style="margin-left: 10px;"></i>
+                                800-123-4567</li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; opacity: 0.5; font-size: 0.9rem;">
+                    <p>&copy; 2026 جميع الحقوق محفوظة لمنصة مُسعف - مبادرة
+                        وطنية</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
