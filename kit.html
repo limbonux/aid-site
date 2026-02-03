@@ -10,7 +10,7 @@
         <style>
         .kit-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
             margin: 60px 0;
         }
@@ -55,7 +55,6 @@
                 <i class="fas fa-heart-pulse"></i>
                 <span>مُسعف</span>
             </a>
-            <i class="fas fa-bars mobile-nav-toggle"></i>
             <nav>
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
@@ -67,10 +66,20 @@
                     <li><a href="tips.html">نصائح وإرشادات</a></li>
                 </ul>
             </nav>
+            <div class="header-mobile-actions">
+                <i class="fas fa-bars mobile-nav-toggle"></i>
+                <div class="header-actions">
+                    <a href="emergency.html"
+                        class="btn btn-primary emergency-btn-header">
+                        <i class="fas fa-phone-alt"></i> <span>اتصل
+                            بالطوارئ</span>
+                    </a>
+                </div>
+            </div>
         </header>
 
         <main>
-            <div class="hero">
+            <div class="hero page-hero-small">
                 <div class="container animate">
                     <span class="section-tag"
                         style="color: rgba(255,255,255,0.7);">رفيقك في كل
@@ -133,7 +142,7 @@
                 <div style="text-align: center; margin-bottom: 60px;"
                     class="animate">
                     <img
-                        src="https://images.unsplash.com/photo-1583947581924-860bda3a44f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        src="images/kit-close.png"
                         alt="Full First Aid Kit"
                         style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 40px; box-shadow: var(--shadow-md);">
                 </div>

@@ -52,7 +52,6 @@
                 <i class="fas fa-heart-pulse"></i>
                 <span>مُسعف</span>
             </a>
-            <i class="fas fa-bars mobile-nav-toggle"></i>
             <nav>
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
@@ -65,6 +64,16 @@
                             وإرشادات</a></li>
                 </ul>
             </nav>
+            <div class="header-mobile-actions">
+                <i class="fas fa-bars mobile-nav-toggle"></i>
+                <div class="header-actions">
+                    <a href="emergency.html"
+                        class="btn btn-primary emergency-btn-header">
+                        <i class="fas fa-phone-alt"></i> <span>اتصل
+                            بالطوارئ</span>
+                    </a>
+                </div>
+            </div>
         </header>
 
         <main>
@@ -111,7 +120,7 @@
                 <h2 class="section-title" style="text-align: center;">خرافات
                     وحقائق</h2>
                 <div class="animate">
-                    <div class="myth-container">
+                    <div class="myth-container-responsive">
                         <div class="myth-part">
                             <h3>❌ الخرافة</h3>
                             <p>ميل الرأس للخلف عند الرعاف (نزيف الأنف) لوقف
@@ -124,7 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="myth-container">
+                    <div class="myth-container-responsive">
                         <div class="myth-part">
                             <h3>❌ الخرافة</h3>
                             <p>وضع معجون الأسنان أو الزبدة على الحروق
@@ -137,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="myth-container">
+                    <div class="myth-container-responsive">
                         <div class="myth-part">
                             <h3>❌ الخرافة</h3>
                             <p>تحريك المصاب في حوادث السير للاطمئنان عليه.</p>
@@ -154,8 +163,7 @@
 
             <!-- Stories & Quiz -->
             <section class="section container">
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+                <div class="responsive-grid-2">
                     <div class="card animate"
                         style="text-align: right; align-items: flex-start;">
                         <div class="card-icon-wrapper"><i
@@ -168,9 +176,10 @@
                     <div class="card animate"
                         style="background: var(--gradient-dark); color: white;">
                         <div class="card-icon-wrapper"
-                            style="background: rgba(255,255,255,0.1);"><i
-                                class="fas fa-vial-circle-check"
-                                style="color: white;"></i></div>
+                            style="background: rgba(255,255,255,0.1);">
+                            <i class="fas fa-vial-circle-check"
+                                style="color: white;"></i>
+                        </div>
                         <h3>هل أنت مستعد؟</h3>
                         <p>اختبر معلوماتك في الإسعافات الأولية عبر هذا الاختبار
                             السريع والممتع.</p>
@@ -183,13 +192,11 @@
 
             <!-- When not to intervene -->
             <section class="section container" style="text-align: center;">
-                <div
-                    style="background: #fff0f0; border: 2px dashed var(--primary); padding: 60px; border-radius: 40px;">
+                <div class="emergency-notice-large animate">
                     <h2
                         style="color: var(--primary-dark); margin-bottom: 20px;">متى
                         لا يجوز التدخل؟</h2>
-                    <ul
-                        style="list-style: none; display: inline-block; text-align: right; font-size: 1.2rem; line-height: 2;">
+                    <ul class="warning-list-centered">
                         <li>⚠️ إذا كان الموقع غير آمن (وجود حريق، تسرب غاز،
                             أسلاك كهربائية).</li>
                         <li>⚠️ إذا لم تكن مدرباً على الحالة ورأيت أن تدخلك قد

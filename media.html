@@ -14,6 +14,7 @@
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
+            cursor: pointer;
         }
         .video-card:hover {
             transform: translateY(-10px);
@@ -27,19 +28,83 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            background-size: cover;
+            background-position: center;
         }
         .play-btn {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: white;
-            opacity: 0.8;
-            transition: 0.3s;
+            opacity: 0.9;
+            transition: var(--transition);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            pointer-events: none; /* Let the link handle click */
         }
         .video-card:hover .play-btn {
-            transform: scale(1.2);
-            opacity: 1;
+            transform: scale(1.1);
+            color: var(--primary);
         }
         .video-info {
             padding: 25px;
+        }
+
+        /* Video Modal Styles */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 900px;
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                max-width: 100%;
+            }
+            .close-modal {
+                top: -40px;
+            }
         }
     </style>
     </head>
@@ -50,7 +115,6 @@
                 <i class="fas fa-heart-pulse"></i>
                 <span>مُسعف</span>
             </a>
-            <i class="fas fa-bars mobile-nav-toggle"></i>
             <nav>
                 <ul>
                     <li><a href="index.html">الرئيسية</a></li>
@@ -63,10 +127,20 @@
                     <li><a href="tips.html">نصائح وإرشادات</a></li>
                 </ul>
             </nav>
+            <div class="header-mobile-actions">
+                <i class="fas fa-bars mobile-nav-toggle"></i>
+                <div class="header-actions">
+                    <a href="emergency.html"
+                        class="btn btn-primary emergency-btn-header">
+                        <i class="fas fa-phone-alt"></i> <span>اتصل
+                            بالطوارئ</span>
+                    </a>
+                </div>
+            </div>
         </header>
 
         <main>
-            <div class="hero">
+            <div class="hero page-hero-small">
                 <div class="container animate">
                     <span class="section-tag"
                         style="color: rgba(255,255,255,0.7);">شاهد وتعلّم</span>
@@ -77,80 +151,137 @@
             </div>
 
             <section class="section container">
-                <h2 class="section-title">فيديوهات تعليمية</h2>
+                <h2 class="section-title">فيديوهات تعليمية مختارة</h2>
                 <div class="grid-3 animate">
-                    <!-- Video 1 -->
-                    <div class="video-card">
-                        <div class="video-thumb">
-                            <img
-                                src="https://img.youtube.com/vi/Vv_S7V_46u0/maxresdefault.jpg"
-                                alt="CPR"
-                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-                            <a
-                                href="https://www.youtube.com/watch?v=Vv_S7V_46u0"
-                                target="_blank" class="play-btn"><i
-                                    class="fas fa-play-circle"></i></a>
+                    <!-- Video 1: CPR -->
+                    <div class="video-card" onclick="openVideo('S0-yI23Lw8g')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/S0-yI23Lw8g/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
                         </div>
                         <div class="video-info">
-                            <h3>الإنعاش القلبي الرئوي</h3>
-                            <p>شرح عملي من الهلال الأحمر السعودي لكيفية إنعاش
-                                القلب.</p>
+                            <h3>الإنعاش القلبي الرئوي (CPR)</h3>
+                            <p>تعلم كيفية إجراء التدليك القلبي والتنفس الاصطناعي
+                                لإنقاذ حياة المصاب بتوقف القلب.</p>
                         </div>
                     </div>
 
-                    <!-- Video 2 -->
-                    <div class="video-card">
-                        <div class="video-thumb">
-                            <img
-                                src="https://img.youtube.com/vi/yG75EieM8oQ/maxresdefault.jpg"
-                                alt="Choking"
-                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-                            <a
-                                href="https://www.youtube.com/watch?v=yG75EieM8oQ"
-                                target="_blank" class="play-btn"><i
-                                    class="fas fa-play-circle"></i></a>
+                    <!-- Video 2: Burns -->
+                    <div class="video-card" onclick="openVideo('Df8M_JdO_tI')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/Df8M_JdO_tI/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
                         </div>
                         <div class="video-info">
-                            <h3>إسعاف الغصة</h3>
-                            <p>تعلم مناورة هيمليك لإنقاذ الشخص المختنق في ثوانٍ
-                                معدودة.</p>
+                            <h3>إسعاف الحروق</h3>
+                            <p>دليل وزارة الصحة للتعامل مع الحروق بمختلف درجاتها
+                                وطرق تبريدها الصحيحة.</p>
                         </div>
                     </div>
 
-                    <!-- Video 3 -->
-                    <div class="video-card">
-                        <div class="video-thumb">
-                            <img
-                                src="https://img.youtube.com/vi/XjMvBW9KDLA/maxresdefault.jpg"
-                                alt="Bleeding"
-                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-                            <a
-                                href="https://www.youtube.com/watch?v=XjMvBW9KDLA"
-                                target="_blank" class="play-btn"><i
-                                    class="fas fa-play-circle"></i></a>
+                    <!-- Video 3: Choking -->
+                    <div class="video-card" onclick="openVideo('dZ9-i_UpjlA')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/dZ9-i_UpjlA/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
                         </div>
                         <div class="video-info">
-                            <h3>وقف النزيف</h3>
-                            <p>خطوات عملية للتعامل مع الجروح العميقة والنزيف
-                                الغزير.</p>
+                            <h3>إسعاف الغصة (الاختناق)</h3>
+                            <p>تعلم مناورة هيمليك الصحيحة لإنقاذ الشخص المختنق
+                                بجسم غريب في مجرى التنفس.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 4: Nosebleed -->
+                    <div class="video-card" onclick="openVideo('DfJa6sUGR2Q')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/DfJa6sUGR2Q/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3>نزيف الأنف (الرعاف)</h3>
+                            <p>الخطوات العلمية الصحيحة لوقف النزيف الأنفي وتفادي
+                                الأخطاء التي قد تضر المصاب.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 5: Fractures -->
+                    <div class="video-card" onclick="openVideo('p6p303M_6Gk')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/p6p303M_6Gk/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3>الكسور والالتواءات</h3>
+                            <p>دليل شامل من الهلال الأحمر السعودي حول كيفية
+                                تثبيت الكسور والحد من مضاعفاتها.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 6: Fainting -->
+                    <div class="video-card" onclick="openVideo('K-8P7H9oHNo')">
+                        <div class="video-thumb"
+                            style="background-image: url('https://img.youtube.com/vi/K-8P7H9oHNo/hqdefault.jpg');">
+                            <div class="play-btn"><i
+                                    class="fas fa-play-circle"></i></div>
+                        </div>
+                        <div class="video-info">
+                            <h3>الإغماء وفقدان الوعي</h3>
+                            <p>تعلم كيفية التصرف السريع عند رؤية شخص يفقد وعيه
+                                لضمان سلامة التنفس لديه.</p>
                         </div>
                     </div>
                 </div>
 
-                <h2 class="section-title" style="margin-top: 100px;">إنفوجرافيك
-                    توعوي</h2>
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;"
-                    class="animate">
-                    <img src="https://pbs.twimg.com/media/D-H1R8WWsAAnf6G.jpg"
-                        alt="Infographic 1"
-                        style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-md);">
-                    <img src="https://pbs.twimg.com/media/E_H8O8XXIAI1O7J.jpg"
-                        alt="Infographic 2"
-                        style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-md);">
+                <h2 class="section-title" style="margin-top: 100px;">معرض الصور
+                    التوعوي</h2>
+                <div class="responsive-grid-2 animate">
+                    <div
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <img
+                            src="images/tools.png"
+                            alt="Medical Equipment" class="main-img"
+                            style="width: 100%; height: 300px; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 15px;">
+                            <h4 style="margin: 0;">أدوات الإسعاف الأساسية</h4>
+                        </div>
+                    </div>
+                    <div
+                        style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <img
+                            src="images/hero-bg.png"
+                            alt="Emergency Response" class="main-img"
+                            style="width: 100%; height: 300px; object-fit: cover;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 15px;">
+                            <h4 style="margin: 0;">خطوات الاستجابة للطوارئ</h4>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal" onclick="closeVideo()">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <div class="close-modal" onclick="closeVideo()"><i
+                        class="fas fa-times-circle"></i></div>
+                <iframe id="videoPlayer"
+                    src
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
 
         <footer>
             <div class="container">
@@ -216,6 +347,32 @@
             </div>
         </footer>
 
+        <script>
+            function openVideo(videoId) {
+                const modal = document.getElementById('videoModal');
+                const player = document.getElementById('videoPlayer');
+                let embedUrl = "";
+                
+                if (videoId.startsWith('list=')) {
+                    embedUrl = `https://www.youtube.com/embed/videoseries?${videoId}&autoplay=1`;
+                } else {
+                    embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                }
+                
+                player.src = embedUrl;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Stop scrolling
+            }
+
+            function closeVideo() {
+                const modal = document.getElementById('videoModal');
+                const player = document.getElementById('videoPlayer');
+                
+                player.src = ""; // Stop video
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Enable scrolling
+            }
+        </script>
         <script src="js/main.js"></script>
     </body>
 </html>

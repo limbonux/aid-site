@@ -17,7 +17,6 @@
                 <i class="fas fa-heart-pulse"></i>
                 <span>مُسعف</span>
             </a>
-            <i class="fas fa-bars mobile-nav-toggle"></i>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">الرئيسية</a></li>
@@ -29,11 +28,15 @@
                     <li><a href="tips.html">نصائح وإرشادات</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">
-                <a href="emergency.html" class="btn btn-primary"
-                    style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">
-                    <i class="fas fa-phone-alt"></i> اتصل بالطوارئ
-                </a>
+            <div class="header-mobile-actions">
+                <i class="fas fa-bars mobile-nav-toggle"></i>
+                <div class="header-actions">
+                    <a href="emergency.html"
+                        class="btn btn-primary emergency-btn-header">
+                        <i class="fas fa-phone-alt"></i> <span>اتصل
+                            بالطوارئ</span>
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -61,7 +64,7 @@
             </section>
 
             <!-- Stats/Numbers Banner -->
-            <section class="container" style="margin-top: -60px;">
+            <section class="container stats-section">
                 <div class="stats-banner animate"
                     style="animation-delay: 0.2s;">
                     <div class="stat-item">
@@ -81,49 +84,38 @@
 
             <!-- Definition Section -->
             <section class="section container">
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 80px; align-items: center;">
+                <div class="responsive-grid-2">
                     <div class="animate">
                         <span class="section-tag">تعريف موجز</span>
                         <h2 class="section-title">ما هي الإسعافات الأولية؟</h2>
-                        <p style="font-size: 1.05rem; margin-bottom: 30px;">
+                        <p class="description-text">
                             هي العناية الأولية والفورية والمؤقتة التي تُقدم
                             للمصاب بمرض أو جرح مفاجئ قبل وصول سيارة الإسعاف أو
                             الطبيب المختص. هي ليست علاجاً بل تدخل إنقاذي قد يكون
                             السبب في بقاء الشخص على قيد الحياة.
                         </p>
-                        <div
-                            style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-sm); border-right: 5px solid var(--primary);">
+                        <div class="info-box-light">
                             <h4
                                 style="margin-bottom: 10px; color: var(--primary);">لماذا
                                 هي مهمة؟</h4>
-                            <ul style="list-style: none; padding-right: 0;">
-                                <li style="margin-bottom: 15px;"><i
-                                        class="fas fa-check-circle"
-                                        style="color: var(--success); margin-left: 10px;"></i>
-                                    الحفاظ على حياة المصاب ومنع الوفاة.</li>
-                                <li style="margin-bottom: 15px;"><i
-                                        class="fas fa-check-circle"
-                                        style="color: var(--success); margin-left: 10px;"></i>
-                                    منع تدهور الإصابة والحد من المضاعفات
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle"></i> الحفاظ
+                                    على حياة المصاب ومنع الوفاة.</li>
+                                <li><i class="fas fa-check-circle"></i> منع
+                                    تدهور الإصابة والحد من المضاعفات
                                     الخطيرة.</li>
-                                <li style="margin-bottom: 0;"><i
-                                        class="fas fa-check-circle"
-                                        style="color: var(--success); margin-left: 10px;"></i>
-                                    مساعدة المصاب في الوصول لحالة الاستقرار حتى
-                                    وصول الطاقم الطبي.</li>
+                                <li><i class="fas fa-check-circle"></i> مساعدة
+                                    المصاب في الوصول لحالة الاستقرار حتى وصول
+                                    الطاقم الطبي.</li>
                             </ul>
                         </div>
                     </div>
-                    <div style="position: relative;" class="animate">
+                    <div class="image-wrapper animate">
                         <img
-                            src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                            alt="EMS Service"
-                            style="width: 100%; border-radius: 40px; box-shadow: var(--shadow-md);">
-                        <div
-                            style="position: absolute; bottom: -20px; right: -20px; background: var(--primary); color: white; padding: 30px; border-radius: 24px; box-shadow: var(--shadow-md);">
-                            <i class="fas fa-ambulance"
-                                style="font-size: 1.8rem;"></i>
+                            src="images/ambulance.png"
+                            alt="EMS Service" class="main-img">
+                        <div class="floating-badge">
+                            <i class="fas fa-ambulance"></i>
                         </div>
                     </div>
                 </div>
@@ -181,28 +173,21 @@
 
             <!-- Visual Media Preview -->
             <section class="section container">
-                <div
-                    style="background: var(--gradient-dark); border-radius: 50px; padding: 50px; color: white; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <h2
-                            style="font-size: 1.8rem; margin-bottom: 20px;">وسائط
-                            تعليمية تفاعلية</h2>
-                        <p
-                            style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 30px;">شاهد
-                            فيديوهات قصيرة وإنفوجرافيك يوضح لك الخطوات العملية
-                            لإسعاف المصابين بطريقة بصرية سهلة الفهم.</p>
+                <div class="cta-banner-dark">
+                    <div class="cta-content">
+                        <h2 class="cta-title">وسائط تعليمية تفاعلية</h2>
+                        <p class="cta-text">شاهد فيديوهات قصيرة وإنفوجرافيك يوضح
+                            لك الخطوات العملية لإسعاف المصابين بطريقة بصرية سهلة
+                            الفهم.</p>
                         <a href="media.html" class="btn btn-primary">انتقل
                             للمكتبة المرئية</a>
                     </div>
-                    <div
-                        style="flex: 1; min-width: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="cta-images">
                         <img
-                            src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            style="width: 100%; border-radius: 20px;"
+                            src="images/tools.png"
                             alt="Medical">
                         <img
-                            src="https://images.unsplash.com/photo-1542884748-2b87b36c6b90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                            style="width: 100%; border-radius: 20px;"
+                            src="images/kit-close.png"
                             alt="Health">
                     </div>
                 </div>
