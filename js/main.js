@@ -36,7 +36,7 @@ const casesData = {
             "لا تضع الزبدة، الثلج، أو أي مواد منزلية على الحرق."
         ],
         emergency: "اتصل بـ 997 إذا كان الحرق في الوجه، الرقبة، المفاصل، الأعضاء التناسلية، أو إذا كان الحرق كيميائياً أو كهربائياً، أو من الدرجة الثالثة.",
-        videoId: "Df8M_JdO_tI"
+        videoId: "o_aPMLEqeI8"
     },
     fractures: {
         title: "الكسور والإصابات العظمية",
@@ -56,7 +56,7 @@ const casesData = {
             "هدئ من روع المصاب وامنع الصدمة."
         ],
         emergency: "اتصل بـ 997 فوراً في حالات الكسور المفتوحة، أو إذا كان المصاب غير قادر على تحريك أطرافه، أو في حوادث السقوط من مكان مرتفع.",
-        videoId: "p6p303M_6Gk"
+        videoId: "lY7DLGaz4ek"
     },
     choking: {
         title: "الغصة (الاختناق)",
@@ -96,7 +96,7 @@ const casesData = {
             "إذا تقيأ المصاب، ضعه في وضعية الإفاقة (على جنبه)."
         ],
         emergency: "اتصل بـ 997 إذا استمر الإغماء لأكثر من دقيقة، أو إذا تكرر الإغماء، أو إذا كان المصاب يعاني من السكري أو أمراض القلب.",
-        videoId: "K-8P7H9oHNo"
+        videoId: "DE-1R5pqq8w"
     },
     bites: {
         title: "اللدغات والعضات",
@@ -218,17 +218,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('nav');
 
     if (mobileNavToggle && navMenu) {
-        mobileNavToggle.addEventListener('click', () => {
+        // Create overlay if it doesn't exist
+        let overlay = document.querySelector('.nav-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'nav-overlay';
+            document.body.appendChild(overlay);
+        }
+
+        const toggleMenu = (e) => {
+            if (e) e.preventDefault();
             navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
 
             // Change icon
             if (navMenu.classList.contains('active')) {
                 mobileNavToggle.classList.remove('fa-bars');
                 mobileNavToggle.classList.add('fa-times');
+                document.body.style.overflow = 'hidden'; // Prevent scroll
             } else {
                 mobileNavToggle.classList.remove('fa-times');
                 mobileNavToggle.classList.add('fa-bars');
+                document.body.style.overflow = ''; // Enable scroll
             }
-        });
+        };
+
+        mobileNavToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
     }
 });
