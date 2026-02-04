@@ -1,6 +1,6 @@
 # Aid Site (Mus'ef) 🚑
 
-[**Switch to Arabic Version (README.md)**](README_AR.md)
+[**Switch to Arabic Version (README_AR.md)**](README_AR.md)
 
 **Mus'ef** is a technical awareness initiative aimed at spreading first aid culture and providing the community with the necessary knowledge to handle emergency situations with confidence and professionalism.
 
