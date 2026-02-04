@@ -1,47 +1,45 @@
-# مُسعف (Aid Site) 🚑
+# Aid Site (Mus'ef) 🚑
 
-**مُسعف** هو مبادرة توعوية تقنية تهدف إلى نشر ثقافة الإسعافات الأولية وتزويد المجتمع السعودي والعربي بالمعرفة اللازمة للتعامل مع الحالات الطارئة بكل ثقة واحترافية.
+[**Switch to Arabic Version (README.md)**](README.md)
 
----
-
-## 🌟 المميزات (Features)
-
-*   **دليل الحالات الإسعافية:** شرح مفصل لأكثر من 50 حالة (نزيف، حروق، كسور، غصة، إلخ) مع خطوات عملية.
-*   **مكتبة مرئية:** فيديوهات توضيحية مختارة بعناية من مصادر موثوقة مثل الهلال الأحمر السعودي ووزارة الصحة.
-*   **أرقام الطوارئ:** وصول سريع لأهم أرقام الطوارئ في المملكة (911, 997).
-*   **حقيبة الإسعاف:** قائمة تفاعلية بمكونات الحقيبة المثالية وكيفية استخدامها.
-*   **تصميم متجاوب:** تجربة مستخدم سلسة على جميع الأجهزة (جوال، تابلت، كمبيوتر) مع قائمة جانبية ذكية.
-*   **نصائح وإرشادات:** قسم خاص لتصحيح المفاهيم الخاطئة وتقديم نصائح وقائية.
-
-## 🛠️ التقنيات المستخدمة (Technologies)
-
-*   **HTML5 & Semantic HTML**: للهيكلية ومعايير الـ SEO.
-*   **Vanilla CSS3**: للتصميم الراقي مع استخدام تقنيات Glassmorphism و Responsive Design.
-*   **JavaScript (ES6)**: للمنطق البرمجي، تشغيل الفيديوهات، والتحكم في القوائم الديناميكية.
-*   **Font Awesome**: للأيقونات التفاعلية.
-*   **Google Fonts**: خط (Almarai) للخطوط العربية الراقية.
-
-## 🚀 التشغيل وكيفية المساعدة
-
-يمكنك تصفح الموقع مباشرة عبر [رابط المشروع على GitHub Pages](https://limbonux.github.io/aid-site/).
+**Mus'ef** is a technical awareness initiative aimed at spreading first aid culture and providing the community with the necessary knowledge to handle emergency situations with confidence and professionalism.
 
 ---
 
-## 📸 معرض لقطات الشاشة (Project Showroom)
+## 🌟 Features
 
-| الواجهة الرئيسية | أهداف وجوهر الإسعافات | دليل الحالات |
+*   **Emergency Cases Guide:** Detailed explanation of over 50 cases (bleeding, burns, fractures, choking, etc.) with practical steps.
+*   **Visual Library:** Carefully selected instructional videos from reliable sources like the Saudi Red Crescent and the Ministry of Health.
+*   **Emergency Numbers:** Quick access to essential emergency numbers (911, 997).
+*   **First Aid Kit:** Interactive list of ideal kit components and how to use them.
+*   **Responsive Design:** Smooth user experience on all devices (mobile, tablet, desktop) with a smart side-drawer.
+*   **Tips and Guidance:** A dedicated section to correct misconceptions and provide preventive advice.
+
+## 🛠️ Technologies Used
+
+*   **HTML5 & Semantic HTML**: For structure and SEO standards.
+*   **Vanilla CSS3**: For a premium look using Glassmorphism and Responsive Design techniques.
+*   **JavaScript (ES6)**: For business logic, video playback, and dynamic menu management.
+*   **Font Awesome**: For interactive icons.
+*   **Google Fonts**: Almarai font for elegant Arabic typography.
+
+## 🚀 Live Demo
+
+Browse the site live at [GitHub Pages](https://limbonux.github.io/aid-site/).
+
+---
+
+## 📸 Project Showroom
+
+| Home Page | Core of First Aid | Cases Directory |
 |:---:|:---:|:---:|
 | <img src="screenshots/1.png" width="250"> | <img src="screenshots/2.png" width="250"> | <img src="screenshots/3.png" width="250"> |
 
-| تفاصيل الحالة | أرقام الطوارئ |  الوسائط التوعوية |
+| Case Details | Emergency Numbers | Awareness Media |
 |:---:|:---:|:---:|
 | <img src="screenshots/4.png" width="250"> | <img src="screenshots/5.png" width="250"> | <img src="screenshots/6.png" width="250"> |
 
-
 ---
 
-### 🛡️ إخلاء مسؤولية
-المعلومات الواردة في هذا الموقع هي لأغراض تعليمية وتوعوية فقط، ولا تغني عن استدعاء الطوارئ أو استشارة الطبيب المختص عند الضرورة.
-
----
-
+### 🛡️ Disclaimer
+The information provided on this site is for educational and awareness purposes only and is not a substitute for calling emergency services or consulting a specialist when necessary.
